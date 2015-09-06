@@ -1,0 +1,33 @@
+ #include<stdio.h>
+ #include<conio.h>
+ #define max 100
+ void main()
+ {
+ int a[max],i,tmp,j,size;
+ printf("\n enter size of array less than %d",max);
+ scanf("%d",&size);
+ printf("\n enter array");
+ for(i=0;i<size;i++)
+  {
+  scanf("%d",&a[i]);
+  }
+ printf("\n performing sorting operation");
+ for(i=0;i<size;i++)
+  {
+  for(j=i+1;j<size;j++)
+   {
+    if(a[i]>a[j])
+     {
+      tmp=a[i];
+      a[i]=a[j];
+      a[j]=tmp;
+      }
+   }
+  }
+ printf("\n sorted array is");
+ for(i=0;i<size;i++)
+  {
+  printf(" %d",a[i]);
+  }
+ getch();
+}
